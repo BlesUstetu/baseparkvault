@@ -8,10 +8,8 @@ return(
 BaseParkVault
 </div>
 
-<div className="navLinks">
-Vault
-Stats
-Docs
+<div className="network">
+Base Network
 </div>
 
 </div>
