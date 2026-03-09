@@ -1,8 +1,14 @@
+/* GLOBAL */
+
+*{
+box-sizing:border-box;
+}
+
 body{
-background: radial-gradient(circle at top,#0b0f19,#020617);
-color:white;
-font-family: Inter, sans-serif;
 margin:0;
+font-family:Inter,system-ui,sans-serif;
+background:radial-gradient(circle at top,#0b0f19,#020617);
+color:white;
 }
 
 /* NAVBAR */
@@ -11,25 +17,26 @@ margin:0;
 display:flex;
 justify-content:space-between;
 align-items:center;
-padding:20px 40px;
+padding:18px 40px;
 background:#020617;
-border-bottom:1px solid #111;
+border-bottom:1px solid #111827;
 }
 
 .logo{
 font-size:20px;
 font-weight:700;
+letter-spacing:0.5px;
 }
 
 .network{
-font-size:14px;
+font-size:13px;
 opacity:0.7;
 }
 
 /* CONTAINER */
 
 .container{
-max-width:520px;
+max-width:540px;
 margin:auto;
 margin-top:80px;
 padding:20px;
@@ -46,13 +53,13 @@ background:#0f172a;
 padding:10px 14px;
 border-radius:12px;
 display:inline-block;
-margin-bottom:8px;
-font-size:14px;
+font-size:13px;
+margin-bottom:6px;
 }
 
 .walletBalance{
-font-size:14px;
-opacity:0.8;
+font-size:13px;
+opacity:0.75;
 margin-bottom:10px;
 }
 
@@ -64,53 +71,46 @@ border:none;
 padding:12px 18px;
 border-radius:12px;
 cursor:pointer;
-font-weight:bold;
+font-weight:600;
 margin-right:8px;
 transition:0.2s;
+color:black;
 }
 
 .btn:hover{
-transform:scale(1.05);
+transform:translateY(-2px);
 box-shadow:0 0 15px rgba(0,255,200,0.4);
 }
 
 .btnDisconnect{
 background:#ff4d6d;
 border:none;
-padding:10px 14px;
+padding:9px 14px;
 border-radius:10px;
 cursor:pointer;
 color:white;
+font-size:12px;
 }
 
-/* VAULT CARD */
-
-.vaultCard{
-background:#020617;
-padding:22px;
-border-radius:16px;
-box-shadow:0 0 20px rgba(0,255,200,0.1);
-margin-top:20px;
-}
-
-.input{
-width:100%;
-padding:14px;
-border-radius:12px;
-border:none;
-margin-bottom:15px;
-background:#020617;
-color:white;
-font-size:16px;
+.btnDanger{
+background:linear-gradient(135deg,#ff6a6a,#ffb86b);
+color:black;
 }
 
 /* STATS */
 
-.statsCard{
-background:#020617;
-padding:18px;
-border-radius:16px;
+.statsRow{
+display:flex;
+gap:14px;
 margin-bottom:20px;
+}
+
+.statItem{
+flex:1;
+background:#020617;
+padding:16px;
+border-radius:14px;
+box-shadow:0 0 15px rgba(0,255,200,0.05);
 }
 
 .statTitle{
@@ -123,24 +123,104 @@ font-size:22px;
 margin-top:6px;
 }
 
+/* VAULT CARD */
+
+.vaultCard{
+background:#020617;
+padding:22px;
+border-radius:18px;
+box-shadow:
+0 0 20px rgba(0,255,200,0.08),
+0 0 40px rgba(0,255,200,0.04);
+}
+
+/* INPUT */
+
+.input{
+width:100%;
+padding:14px;
+border-radius:12px;
+border:none;
+background:#020617;
+color:white;
+font-size:16px;
+margin-bottom:14px;
+outline:none;
+}
+
 /* STATUS */
 
 .status{
 margin-top:12px;
 font-size:14px;
-opacity:0.8;
+opacity:0.75;
 }
 
-/* MOBILE */
+/* BUTTON GROUP */
+
+.buttonRow{
+display:flex;
+flex-wrap:wrap;
+gap:8px;
+}
+
+/* MOBILE RESPONSIVE */
 
 @media(max-width:600px){
 
+.navbar{
+padding:14px 20px;
+}
+
+.logo{
+font-size:18px;
+}
+
 .container{
+margin-top:40px;
 padding:15px;
 }
 
-.navbar{
-padding:15px 20px;
+.statsRow{
+flex-direction:column;
+}
+
+.statValue{
+font-size:20px;
+}
+
+.btn{
+width:100%;
+margin-right:0;
+}
+
+.buttonRow{
+flex-direction:column;
+}
+
+.input{
+font-size:15px;
+padding:12px;
+}
+
+}
+
+/* TABLET */
+
+@media(min-width:601px) and (max-width:900px){
+
+.container{
+max-width:460px;
+}
+
+}
+
+/* DESKTOP LARGE */
+
+@media(min-width:1200px){
+
+.container{
+max-width:580px;
 }
 
 }
