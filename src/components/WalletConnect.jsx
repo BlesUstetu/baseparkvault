@@ -1,4 +1,3 @@
-
 import {useState} from "react"
 import {ethers} from "ethers"
 
@@ -14,7 +13,6 @@ return
 }
 
 const provider = new ethers.BrowserProvider(window.ethereum)
-
 const accounts = await provider.send("eth_requestAccounts",[])
 
 setAddress(accounts[0])
@@ -25,9 +23,15 @@ return(
 
 <div>
 
-<button onClick={connect}>Connect Wallet</button>
+<button className="btn" onClick={connect}>
+Connect Wallet
+</button>
 
-<p>{address}</p>
+{address && (
+<div className="walletBadge">
+Wallet : {address.slice(0,6)}...{address.slice(-4)}
+</div>
+)}
 
 </div>
 
