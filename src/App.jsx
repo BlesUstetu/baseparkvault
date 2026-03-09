@@ -1,7 +1,7 @@
 import Navbar from "./components/Navbar"
 import WalletConnect from "./components/WalletConnect"
 import Vault from "./components/Vault"
-import Stats from "./components/Stats"
+import TVLChart from "./components/TVLChart"
 
 export default function App(){
 
@@ -15,7 +15,7 @@ return(
 
 <WalletConnect/>
 
-<Stats/>
+<TVLChart/>
 
 <Vault/>
 
