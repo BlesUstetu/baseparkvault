@@ -1,7 +1,7 @@
 import Navbar from "./components/Navbar"
-import WalletConnect from "./components/WalletConnect"
-import Vault from "./components/Vault"
-import TVLChart from "./components/TVLChart"
+import WalletPanel from "./components/WalletPanel"
+import Stats from "./components/Stats"
+import VaultCard from "./components/VaultCard"
 
 export default function App(){
 
@@ -13,11 +13,11 @@ return(
 
 <div className="container">
 
-<WalletConnect/>
+<WalletPanel/>
 
-<TVLChart/>
+<Stats/>
 
-<Vault/>
+<VaultCard/>
 
 </div>
 
