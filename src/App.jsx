@@ -1,20 +1,24 @@
+import Navbar from "./components/Navbar"
 import WalletConnect from "./components/WalletConnect"
 import Vault from "./components/Vault"
+import Stats from "./components/Stats"
 
 export default function App(){
 
 return(
 
-<div className="container">
+<div>
 
-<div className="title">BaseParkVault</div>
+<Navbar/>
+
+<div className="container">
 
 <WalletConnect/>
 
+<Stats/>
+
 <Vault/>
 
-<div className="tvl">
-Vault TVL : loading...
 </div>
 
 </div>
